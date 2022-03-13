@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\StoreQueueRequest;
 use App\Models\ {
     CustomerType,
     Queue,
@@ -23,10 +24,34 @@ class QueueController extends Controller
                 'customer_types' => $customer_types
             ]);
         }
-        else {
-            return view('app.index');
+    }
+
+    public function store(StoreQueueRequest $request) {
+        $validated = $request->validated();
+
+        switch($validated['customer_type_name']) {
+            case 'Citizen':
+                $customer_name = $validated['customer_title'] . " " . $validated['customer_first_name'] . " " . $validated['customer_last_name'];
+            break;
+            case 'Organisation':
+                $customer_name = $validated['customer_organisation_name'];
+            break;
+            default:
+                $customer_name = 'Anonymous';
+            break;
         }
 
+        $new_queue = Queue::create([
+            'service_id' => $validated['service_id'],
+            'customer_type_id' => $validated['customer_type_id'],
+            'customer_name' => $customer_name,
+        ]);
+
+        return response()->json([
+            'message' => "Customer successfully added to the queue - #{$new_queue->id}"
+        ]);
     }
+
+
 
 }

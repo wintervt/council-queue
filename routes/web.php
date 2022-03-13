@@ -15,9 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('api')->group(function () {
 
-//    Route::get('/', 'AppController@index')->name('app');
-
     Route::get('/queue', 'QueueController@index')->name('queue');
+    Route::post('/queue', 'QueueController@store');
 
 });
 

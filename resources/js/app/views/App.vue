@@ -1,13 +1,13 @@
 <template>
     <div class="flex flex-col flex-grow bg-gray-100">
 
-        <div class="relative bg-white border-b">
+        <div class="relative bg-white border-b px-2">
             <div class="container mx-auto flex justify-between items-center py-3 md:justify-start space-x-4 md:space-x-6 lg:space-x-10">
                 Queue App
             </div>
         </div>
 
-        <div class="flex-grow flex flex-col py-3">
+        <div class="flex-grow flex flex-col py-3 px-2">
             <router-view></router-view>
         </div>
 

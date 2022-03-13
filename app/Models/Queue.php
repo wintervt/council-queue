@@ -9,13 +9,18 @@ class Queue extends Model
 {
     protected $fillable = ['service_id', 'customer_type_id', 'customer_name'];
 
+    protected $casts = [
+        'created_at' => 'datetime:g:i A'
+    ];
+
     public function customer_type()
     {
-        return $this->hasOne(CustomerType::class);
+        return $this->belongsTo(CustomerType::class);
     }
+
 
     public function service()
     {
-        return $this->hasOne(Service::class);
+        return $this->belongsTo(Service::class);
     }
 }

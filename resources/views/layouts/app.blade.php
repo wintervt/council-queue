@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<div id="app" class="flex min-h-screen flex-col px-2">
+<div id="app" class="flex min-h-screen flex-col">
     <app></app>
 </div>
 
