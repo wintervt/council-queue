@@ -182,9 +182,9 @@ export default {
                     this.success = response.data.message
                     this.fetch()
                 }).catch(error => {
-                this.submitting = false
-                this.error = error.response.data.message || error.toString()
-                this.errors = error.response.data.errors
+                    this.submitting = false
+                    this.error = error.response.data.message || error.toString()
+                    this.errors = error.response.data.errors
             })
         },
         validation(field) {
