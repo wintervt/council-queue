@@ -20,7 +20,7 @@ Create an empty MYSQL database in your preferred environment and save credential
 
 Copy the `.env.example` file and rename it to `.env` then fill in each of the required variables.
 
-## 3. Installer Composer packages and generate database tables
+## 3. Install Composer packages and generate database tables
 
 ```
 
