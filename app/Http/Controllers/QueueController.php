@@ -22,7 +22,7 @@ class QueueController extends Controller
                 'queues' => $queues,
                 'services' => $services,
                 'customer_types' => $customer_types
-            ]);
+            ], 200);
         }
     }
 
