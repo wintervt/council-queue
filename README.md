@@ -12,7 +12,9 @@
 
 ## Installation:
 
-## 1. Create database and save credentials
+## 1. Create database
+
+Create an empty MYSQL database in your preferred environment and save credentials for later use.
 
 ## 2. Set Environment Variables
 
