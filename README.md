@@ -6,9 +6,6 @@
 - NPM: 6.14.13
 - Node: 14.17.0
 - PHP: 8.0
-- Tailwind: 3.0.22
-- Vue: 3.2.31
-- Laravel: 8.83.4
 
 ## Installation:
 
@@ -37,8 +34,6 @@ php artisan db:seed
 Note: The Database Seeder file will populate the given Services and Customer Types.
 
 ## 4. Install npm packages
-
-You may need nvm to change your Node version before running the below command [Homebrew](https://formulae.brew.sh/formula/nvm).
 
 ```
 
